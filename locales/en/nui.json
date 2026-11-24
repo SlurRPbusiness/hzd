@@ -1,0 +1,66 @@
+{
+  "NUI": {
+    "COMMON": {
+      "CLOSE": "Close"
+    },
+    "DEVMODE": {
+      "TITLE": "HZD Developer Mode",
+      "BADGE_FIVEM": "FiveM CEF",
+      "BADGE_BROWSER": "Browser mock",
+      "TOKEN_LABEL": "Token",
+      "TOKEN_WAITING": "Waiting...",
+      "SECTION": "Quick PvP and system actions",
+      "KILL": "Kill +100",
+      "HEADSHOT": "Headshot",
+      "STREAK": "3x streak",
+      "MATCH_INFO": "Match info",
+      "WARNING": "Restricted zone",
+      "VICTORY": "Victory",
+      "CLEAR": "Clear all",
+      "POSITION": "Position",
+      "LOCALE": "Language",
+      "TRANSLATIONS": "translations loaded",
+      "TOGGLE": "Open developer panel"
+    },
+    "POSITIONS": {
+      "top-right": "Top right",
+      "top-left": "Top left",
+      "top-center": "Top center",
+      "bottom-right": "Bottom right",
+      "bottom-left": "Bottom left",
+      "bottom-center": "Bottom center"
+    },
+    "TEST": {
+      "KILL": {
+        "TITLE": "PVP ELIMINATION",
+        "BADGE": "+100 XP",
+        "MESSAGE": "You eliminated [ITA] Alex_Sniper with a Heavy Sniper"
+      },
+      "HEADSHOT": {
+        "TITLE": "HEADSHOT",
+        "BADGE": "HEADSHOT +150",
+        "MESSAGE": "Instant elimination with a critical headshot"
+      },
+      "STREAK": {
+        "TITLE": "KILLSTREAK",
+        "BADGE": "3X KILLSTREAK",
+        "MESSAGE": "You are dominating the arena! Tactical UAV available"
+      },
+      "VICTORY": {
+        "TITLE": "ROUND WON",
+        "BADGE": "VICTORY",
+        "MESSAGE": "Your team captured the main objective (+500 points)"
+      },
+      "WARNING": {
+        "TITLE": "STORM INCOMING",
+        "BADGE": "WARNING",
+        "MESSAGE": "The safe zone will shrink in 15 seconds"
+      },
+      "INFO": {
+        "TITLE": "SYSTEM NOTIFICATION",
+        "BADGE": "SYSTEM",
+        "MESSAGE": "Stats and inventory loaded"
+      }
+    }
+  }
+}

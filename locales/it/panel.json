@@ -1,0 +1,24 @@
+{
+    "PANEL": {
+        "PARTY": {
+            "UI": {},
+            "GAME": {
+                "SELF": {
+                    "NEW_LEADER": "Ora sei il leader del party!",
+                    "ALREADY_IN_PARTY": "Sei già in un party!",
+                    "JOINED": "Sei entrato nel party di %s",
+                    "FULL": "Il party è pieno!",
+                    "KICK": "Hai rimosso %s dal party!"
+                },
+                "TARGET": {
+                    "LEFT_PARTY": "Il giocatore %s ha lasciato il party!",
+                    "ALREADY_IN_PARTY": "Il giocatore è già in un party!",
+                    "IN_MATCH": "Il player %s sta già in un match!",
+                    "KICKED": "Sei stato cacciato dal party!",
+                    "EXPIRED": "L'invito al party di %s è scaduto!",
+                    "DELETE": "Il party è stato eliminato"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,381 @@
+/* ==========================================================================
+   Apple Notification Component Styles
+   Fisica a Molla, Vetro Traslucido & Estetica Apple PvP
+   ========================================================================== */
+
+/* Contenitori per le Posizioni a Schermo */
+.apple-notification-container {
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 380px;
+  width: calc(100% - 36px);
+  pointer-events: none;
+  perspective: 1000px;
+}
+
+/* Allineamenti Posizione */
+.pos-top-right {
+  top: 24px;
+  right: 24px;
+  align-items: flex-end;
+}
+
+.pos-top-left {
+  top: 24px;
+  left: 24px;
+  align-items: flex-start;
+}
+
+.pos-top-center {
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+}
+
+.pos-bottom-right {
+  bottom: 24px;
+  right: 24px;
+  align-items: flex-end;
+  flex-direction: column-reverse;
+}
+
+.pos-bottom-left {
+  bottom: 24px;
+  left: 24px;
+  align-items: flex-start;
+  flex-direction: column-reverse;
+}
+
+.pos-bottom-center {
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+/* Scheda Notifica - Vetro Traslucido Apple */
+.apple-notification-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--color-bg-surface);
+  backdrop-filter: var(--blur-material-regular);
+  -webkit-backdrop-filter: var(--blur-material-regular);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  pointer-events: auto;
+  cursor: grab;
+  touch-action: none;
+  transform-origin: center right;
+  will-change: transform, opacity;
+  transition: transform 100ms ease-out, box-shadow 150ms ease-out, border-color 150ms ease-out;
+}
+
+/* Feedback Immediato alla Pressione (WWDC Principle 1: Kill Latency) */
+.apple-notification-card:active {
+  cursor: grabbing;
+  transform: scale(0.978);
+  box-shadow: var(--shadow-elevated);
+  border-color: var(--border-focus);
+}
+
+/* Bordo Superiore di Riflesso Ottico (Specular Highlight) */
+.apple-notification-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, var(--border-specular) 25%, var(--border-specular) 75%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+}
+
+/* Layout Interno */
+.card-content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 16px;
+}
+
+/* Icona / Logo */
+.card-icon-container {
+  position: relative;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transition: transform 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.apple-notification-card:active .card-icon-container {
+  transform: scale(0.92);
+}
+
+.card-icon-svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Area Testuale */
+.card-text-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* Intestazione: Titolo & Badge */
+.card-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.card-title-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.card-title {
+  font-size: var(--text-title2-size);
+  font-weight: 600;
+  letter-spacing: var(--text-title2-tracking);
+  line-height: var(--text-title2-leading);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Badge Apple Pill per PvP */
+.card-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+  font-size: var(--text-caption-size);
+  font-weight: 700;
+  letter-spacing: var(--text-caption-tracking);
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-text-primary);
+  font-variant-numeric: tabular-nums;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Messaggio Descrittivo */
+.card-message {
+  font-size: var(--text-body-size);
+  font-weight: 400;
+  letter-spacing: var(--text-body-tracking);
+  line-height: var(--text-body-leading);
+  color: var(--color-text-secondary);
+  word-break: break-word;
+}
+
+/* Pulsante Chiusura Rapida */
+.card-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-text-tertiary);
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 120ms ease, color 120ms ease, transform 100ms ease;
+  margin-top: -2px;
+  margin-right: -4px;
+}
+
+.card-close-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-text-primary);
+}
+
+.card-close-btn:active {
+  transform: scale(0.85);
+}
+
+/* Barra di Progresso Temporale Sottile */
+.card-progress-track {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.card-progress-bar {
+  height: 100%;
+  width: 100%;
+  background: currentColor;
+  opacity: 0.65;
+  transform-origin: left center;
+  transition: transform linear;
+}
+
+/* ==========================================================================
+   Varianti di Tipo / Temi PvP
+   ========================================================================== */
+
+/* PvP Eliminazione Generale */
+.type-pvp {
+  border-color: rgba(94, 92, 230, 0.35);
+  box-shadow: var(--shadow-card), 0 0 20px rgba(94, 92, 230, 0.2);
+}
+.type-pvp .card-icon-container {
+  background: linear-gradient(135deg, rgba(94, 92, 230, 0.3) 0%, rgba(191, 90, 242, 0.15) 100%);
+  color: #bf5af2;
+  border-color: rgba(191, 90, 242, 0.3);
+}
+.type-pvp .card-badge {
+  background: rgba(94, 92, 230, 0.3);
+  color: #d1baff;
+}
+.type-pvp .card-progress-bar {
+  background: #bf5af2;
+}
+
+/* Kill Confermato */
+.type-kill {
+  border-color: rgba(255, 59, 48, 0.4);
+  box-shadow: var(--shadow-card), var(--shadow-glow-red);
+}
+.type-kill .card-icon-container {
+  background: linear-gradient(135deg, rgba(255, 59, 48, 0.35) 0%, rgba(255, 69, 58, 0.15) 100%);
+  color: var(--color-apple-red);
+  border-color: rgba(255, 59, 48, 0.4);
+}
+.type-kill .card-badge {
+  background: rgba(255, 59, 48, 0.3);
+  color: #ff9b96;
+}
+.type-kill .card-progress-bar {
+  background: var(--color-apple-red);
+}
+
+/* Streak / Headshot */
+.type-streak, .type-headshot {
+  border-color: rgba(255, 214, 10, 0.4);
+  box-shadow: var(--shadow-card), var(--shadow-glow-yellow);
+}
+.type-streak .card-icon-container, .type-headshot .card-icon-container {
+  background: linear-gradient(135deg, rgba(255, 214, 10, 0.35) 0%, rgba(255, 159, 10, 0.15) 100%);
+  color: var(--color-apple-yellow);
+  border-color: rgba(255, 214, 10, 0.4);
+}
+.type-streak .card-badge, .type-headshot .card-badge {
+  background: rgba(255, 214, 10, 0.25);
+  color: #ffe673;
+}
+.type-streak .card-progress-bar, .type-headshot .card-progress-bar {
+  background: var(--color-apple-yellow);
+}
+
+/* Successo */
+.type-success {
+  border-color: rgba(48, 209, 88, 0.35);
+  box-shadow: var(--shadow-card), var(--shadow-glow-green);
+}
+.type-success .card-icon-container {
+  background: linear-gradient(135deg, rgba(48, 209, 88, 0.3) 0%, rgba(52, 199, 89, 0.12) 100%);
+  color: var(--color-apple-green);
+  border-color: rgba(48, 209, 88, 0.35);
+}
+.type-success .card-badge {
+  background: rgba(48, 209, 88, 0.25);
+  color: #a7f3d0;
+}
+.type-success .card-progress-bar {
+  background: var(--color-apple-green);
+}
+
+/* Informazione */
+.type-info {
+  border-color: rgba(10, 132, 255, 0.35);
+  box-shadow: var(--shadow-card), var(--shadow-glow-blue);
+}
+.type-info .card-icon-container {
+  background: linear-gradient(135deg, rgba(10, 132, 255, 0.3) 0%, rgba(0, 122, 255, 0.12) 100%);
+  color: var(--color-apple-blue);
+  border-color: rgba(10, 132, 255, 0.35);
+}
+.type-info .card-badge {
+  background: rgba(10, 132, 255, 0.25);
+  color: #99ccff;
+}
+.type-info .card-progress-bar {
+  background: var(--color-apple-blue);
+}
+
+/* Avviso / Warning */
+.type-warning {
+  border-color: rgba(255, 159, 10, 0.35);
+}
+.type-warning .card-icon-container {
+  background: linear-gradient(135deg, rgba(255, 159, 10, 0.3) 0%, rgba(255, 149, 0, 0.12) 100%);
+  color: var(--color-apple-orange);
+  border-color: rgba(255, 159, 10, 0.35);
+}
+.type-warning .card-badge {
+  background: rgba(255, 159, 10, 0.25);
+  color: #ffd08a;
+}
+.type-warning .card-progress-bar {
+  background: var(--color-apple-orange);
+}
+
+/* Errore */
+.type-error {
+  border-color: rgba(255, 69, 58, 0.4);
+}
+.type-error .card-icon-container {
+  background: linear-gradient(135deg, rgba(255, 69, 58, 0.3) 0%, rgba(255, 59, 48, 0.12) 100%);
+  color: var(--color-apple-red);
+  border-color: rgba(255, 69, 58, 0.4);
+}
+.type-error .card-badge {
+  background: rgba(255, 69, 58, 0.25);
+  color: #ff9b96;
+}
+.type-error .card-progress-bar {
+  background: var(--color-apple-red);
+}
+
+/* ==========================================================================
+   Accessibilità - Preferenza Riduzione Movimento
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .apple-notification-card {
+    transition: opacity 150ms ease !important;
+    transform: none !important;
+  }
+  .card-progress-bar {
+    transition: none !important;
+  }
+}
+

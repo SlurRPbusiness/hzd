@@ -1,0 +1,44 @@
+{
+    "SKIN": {
+        "UI": {
+            "TATTOO": {
+                "TITLE": "Tatuaggi",
+                "ITEMS": {
+                    "ZONE_TORSO": "Petto",
+                    "ZONE_HEAD": "Testa",
+                    "ZONE_LEFT_ARM": "Braccio Sinistro",
+                    "ZONE_RIGHT_ARM": "Braccio Destro",
+                    "ZONE_LEFT_LEG": "Gamba Sinistra",
+                    "ZONE_RIGHT_LEG": "Gamba Destra"
+                }
+            },
+            "MODAL": {
+                "ACCEPT": "Si",
+                "DECLINE": "No",
+                "SAVE": {
+                    "TITLE": "Salva Outfit",
+                    "DESCRIPTION": "Aggiornerai i tuoi vestiti!"
+                },
+                "EXIT": {
+                    "TITLE": "Esci",
+                    "DESCRIPTION": "Non verrà applicato nessun cambiamento!"
+                }
+            }
+        },
+        "GAME": {
+            "COMMANDS": {
+                "RELOADSKIN": {
+                    "TITLE": "Ricarica il tuo personaggio",
+                    "FAILURE": {
+                        "TITLE": "Skin Menu",
+                        "DESCRIPTION": "Impossibile ricaricare il personaggio!"
+                    },
+                    "SUCCESS": {
+                        "TITLE": "Skin Menu",
+                        "DESCRIPTION": "Personaggio ricaricato con successo!"
+                    }
+                }
+            }
+        }
+    }
+}

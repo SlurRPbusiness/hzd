@@ -1,0 +1,66 @@
+{
+  "NUI": {
+    "COMMON": {
+      "CLOSE": "Chiudi"
+    },
+    "DEVMODE": {
+      "TITLE": "HZD Developer Mode",
+      "BADGE_FIVEM": "FiveM CEF",
+      "BADGE_BROWSER": "Browser mock",
+      "TOKEN_LABEL": "Token",
+      "TOKEN_WAITING": "In attesa...",
+      "SECTION": "Azioni rapide PvP e sistema",
+      "KILL": "Kill +100",
+      "HEADSHOT": "Headshot",
+      "STREAK": "3x streak",
+      "MATCH_INFO": "Info match",
+      "WARNING": "Zona ristretta",
+      "VICTORY": "Vittoria",
+      "CLEAR": "Rimuovi tutte",
+      "POSITION": "Posizione",
+      "LOCALE": "Lingua",
+      "TRANSLATIONS": "traduzioni caricate",
+      "TOGGLE": "Apri pannello sviluppatore"
+    },
+    "POSITIONS": {
+      "top-right": "Alto a destra",
+      "top-left": "Alto a sinistra",
+      "top-center": "Alto al centro",
+      "bottom-right": "Basso a destra",
+      "bottom-left": "Basso a sinistra",
+      "bottom-center": "Basso al centro"
+    },
+    "TEST": {
+      "KILL": {
+        "TITLE": "ELIMINAZIONE PVP",
+        "BADGE": "+100 XP",
+        "MESSAGE": "Hai abbattuto [ITA] Alex_Sniper con Heavy Sniper"
+      },
+      "HEADSHOT": {
+        "TITLE": "COLPO ALLA TESTA",
+        "BADGE": "HEADSHOT +150",
+        "MESSAGE": "Uccisione istantanea con colpo critico alla testa"
+      },
+      "STREAK": {
+        "TITLE": "SERIE UCCISIONI",
+        "BADGE": "3X KILLSTREAK",
+        "MESSAGE": "Stai dominando l'arena! UAV tattico disponibile"
+      },
+      "VICTORY": {
+        "TITLE": "ROUND VINTO",
+        "BADGE": "VITTORIA",
+        "MESSAGE": "La tua squadra ha conquistato l'obiettivo principale (+500 Punti)"
+      },
+      "WARNING": {
+        "TITLE": "TEMPESTA IN ARRIVO",
+        "BADGE": "ATTENZIONE",
+        "MESSAGE": "La zona sicura si restringerà entro 15 secondi"
+      },
+      "INFO": {
+        "TITLE": "NOTIFICA DI SISTEMA",
+        "BADGE": "SISTEMA",
+        "MESSAGE": "Caricamento statistiche e inventario completato"
+      }
+    }
+  }
+}

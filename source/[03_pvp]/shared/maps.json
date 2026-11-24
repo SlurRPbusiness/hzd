@@ -1,0 +1,54 @@
+{
+    "Mini Arena": {
+        "description": "Pillbox Hill - Corsia centrale, zona PvP stretta",
+        "Team A": {
+            "coords": [215.0, -810.0, 29.7],
+            "heading": 180.0
+        },
+        "Team B": {
+            "coords": [215.0, -750.0, 29.7],
+            "heading": 0.0
+        },
+        "center": [215.0, -780.0, 29.7],
+        "radius": 60.0
+    },
+    "Airport Runway": {
+        "description": "Pista aeroporto LSIA - scontro a lunga distanza",
+        "Team A": {
+            "coords": [-1336.0, -3044.0, 13.9],
+            "heading": 90.0
+        },
+        "Team B": {
+            "coords": [-1050.0, -3044.0, 13.9],
+            "heading": 270.0
+        },
+        "center": [-1193.0, -3044.0, 13.9],
+        "radius": 150.0
+    },
+    "Maze Bank Arena": {
+        "description": "Arena del Maze Bank - CQB indoor",
+        "Team A": {
+            "coords": [-246.0, -2026.0, 28.5],
+            "heading": 90.0
+        },
+        "Team B": {
+            "coords": [-100.0, -2026.0, 28.5],
+            "heading": 270.0
+        },
+        "center": [-173.0, -2026.0, 28.5],
+        "radius": 80.0
+    },
+    "Sandy Deathmatch": {
+        "description": "Sandy Shores - Zona deserto mid-range",
+        "Team A": {
+            "coords": [1700.0, 3690.0, 34.3],
+            "heading": 270.0
+        },
+        "Team B": {
+            "coords": [1850.0, 3690.0, 34.3],
+            "heading": 90.0
+        },
+        "center": [1775.0, 3690.0, 34.3],
+        "radius": 100.0
+    }
+}
